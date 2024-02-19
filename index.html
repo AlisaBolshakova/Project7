@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style></style>
+    <script src="script.js">
+
+    </script>
+    <style>
+      .flex-container{
+        display: flex;
+        background-color: cornflowerblue;
+        height: 100%;
+        padding: 15px;
+        gap: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12pt;
+      }
+      .flex-container>div{
+        background-color: bisque;
+        border: 3px solid rgb(235, 178, 108);
+        border-radius: 10px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>
+        Фильтры:
+        <br>
+        <input type="radio" name="button" id="blurButton" onclick="filterStyle()">Размытие <br>
+        <input type="radio" name="button" value="50%" id="brightnessButton" onclick="filterStyle()">Яркость <br>
+        <input type="radio" name="button" id="contrastButton" onclick="filterStyle()">Контраст <br>
+        <input type="radio" name="button" id="grayScaleButton" onclick="filterStyle()">Оттенки серого <br>
+        <input type="radio" name="button" id="hueRotateButton" onclick="filterStyle()">Оттенок-поворот <br>
+        <input type="radio" name="button" id="invertButton" onclick="filterStyle()">Инверсия <br>
+        <input type="radio" name="button" id="opacityButton" onclick="filterStyle()">Непрозрачность <br>
+        <input type="radio" name="button" id="saturateButton" onclick="filterStyle()">Насыщенность <br>
+        <input type="radio" name="button" id="sepiaButton" onclick="filterStyle()">Сепия <br>
+        <input type="range" id="rangeInput" min="0" max="100" value="0" onchange="filterStyle()"> <br>
+        Размер картинки: <br>
+        <input type="number" id="sizeImage" value = "100" max="100" onchange="changeSize()">
+      </div> 
+      <div>
+        <img src="img/Photo.jpg" alt="" width="100%">
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
